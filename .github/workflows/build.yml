@@ -36,7 +36,9 @@ jobs:
             ext: ""
 
           - os: ubuntu-22.04
-            container: ubuntu:20.04
+            container:
+              image: ubuntu:20.04
+              options: --user root
             target: x86_64-unknown-linux-gnu
             artifact: fingerprint-launcher-linux-x86_64
             ext: ""
