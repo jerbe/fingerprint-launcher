@@ -51,6 +51,7 @@ jobs:
       - name: Install base packages (container)
         if: matrix.is-container == 'true'
         run: |
+          rm -f /var/lib/apt/lists/lock
           apt-get update
           apt-get install -y curl build-essential pkg-config libssl-dev git
 
